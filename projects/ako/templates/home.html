@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<!--create a dynamic name and color-->
+<h1>hello {{name}}</h1>
+
+<!-- create a form-->
+
+<form action="add" method='post'>
+
+    {% csrf_token%}
+
+    Enter 1st number: <input type="text" name="num1"><br>
+    Enter 2nd number: <input type="text" name="num2"><br>
+    <input type="submit">
+</form>
+
+{% endblock %}
